@@ -7,7 +7,7 @@ module.exports = {
 async function insert(videogame) {
   const [id] = await db("videogames").insert(videogame);
 
-  return db("videogame")
+  return db("videogames")
     .where({ id })
     .first();
 }
