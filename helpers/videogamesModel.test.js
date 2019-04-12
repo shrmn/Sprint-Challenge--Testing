@@ -13,6 +13,16 @@ describe("video games model", () => {
         genre: "Arcade", // required
         releaseYear: 1980 // not required
       });
+
+      const videogames = await db("videogames");
+      expect(videogames).toHaveLength(1);
+    });
+  });
+
+  describe("get", async () => {
+    it("should return all rows on success", async () => {
+      const response = await vgModel.get();
+      expect(response).toEqual([]);
     });
   });
 });
