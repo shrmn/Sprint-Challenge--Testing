@@ -103,4 +103,6 @@ describe("server.js", () => {
       expect(response.body).toEqual([]);
     });
   });
+
+  describe("DELETE /api/games", () => {});
 });
